@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 export CUDA_VISIBLE_DEVICES=1
-for task in 'CTB5POS' 'CTB6CWS'  'CTB6POS'  'CTB9POS'  'MSRANER'  'MSRCWS'  'NLPCCCWS'  'OntoNote4NER'  'PKUCWS'  'ResumeNER'  'UD1POS'
+for task in 'MSRANER'
 do
 python ../examples/run_sequence_labeling.py \
   --task_name ${task} \
@@ -13,5 +13,5 @@ python ../examples/run_sequence_labeling.py \
   --train_batch_size 32 \
   --learning_rate 2e-5 \
   --num_train_epochs 3.0 \
-  --output_dir /data/nfsdata/nlp/projects/tmp
+  --output_dir /data/nfsdata/data/sunxiaofei/checkpoints/ner
 done
